@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HamburgerDoc</title>
+    <link rel="stylesheet" href = "hamburger.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+<body>
+    <nav>
+        <ul class ="sidebar">
+        <li onclick = showMenu()><span class="material-symbols-outlined close">close</span></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Expert</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Contact Us</a></li>    
+        </ul>
+        <ul>
+        <li class = logo> <a href = "#">Food<span>Stop</span></a></li>
+        <li class = "hideOnMobile"><a href="#">Home</a></li>
+        <li class = "hideOnMobile"><a href="#">About</a></li>
+        <li class = "hideOnMobile"><a href="#">Menu</a></li>
+        <li class = "hideOnMobile"><a href="#">Expert</a></li>
+        <li class = "hideOnMobile"><a href="#">Testimonials</a></li>
+        <li class = "hideOnMobile"><a href="#">Contact Us</a></li>  
+        <li onclick=showSidebar()><span class="material-symbols-outlined menu">menu</span></li>
+  
+        </ul>
+    </nav>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+    </script>
+    <script>
+        function showMenu(){
+            const menu = document.querySelector('.sidebar')
+            menu.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
